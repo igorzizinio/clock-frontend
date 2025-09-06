@@ -1,16 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relógio Digital Simples</title>
+    <title>Pomodoro 2025.2</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to CSS file -->
 </head>
+
 <body>
-    <h1>Bem-vindo ao relógio digital</h1>
-    <div id="clock">00:00:00</div> <!-- Clock display -->
-    <button id="colorButton">Alterar cor do fundo</button> <!-- Button to change color -->
+    <div class="container">
+
+        <main>
+            <header>
+                <h1>Pomodoro 2025.2</h1>
+                <div>
+                    <button class="btn-link btn-active">Pomodoro</button>
+                    <button class="btn-link">Pausa curta</button>
+                    <button class="btn-link">Pausa longa</button>
+                </div>
+            </header>
+
+
+            <div>
+                <div id="clock">00:00:00</div> <!-- Clock display -->
+                <span class="cicle">#1 Pomodoro</span>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="btn-active btn-link btn-large">Iniciar</button>
+                <button class="btn-link btn-large hidden">Parar</button>
+                <button class="btn-link btn-large">Finalizar</button>
+
+            </div>
+        </main>
+
+        <div id="task-list-container">
+
+            <div id="task-list-header">
+
+                <h2>Tarefas</h2>
+                <button>Ocultar finalizadas</button>
+
+            </div>
+
+
+            <ul class="task-list-item-container">
+                <li class="task-list-item">
+                    <input type="checkbox" name="" id="">
+                    <span>Criar HTML do Pomodoro APP</span>
+                </li>
+
+                <li class="task-list-item">
+                    <input type="checkbox" name="" id="">
+                    <span>Aplicas estilos CSS</span>
+                </li>
+
+                <li class="task-list-item">
+                    <input type="checkbox" name="" id="">
+                    <span>Adicionar interatividade com JavaScript</span>
+                </li>
+
+                <li class="task-list-item">
+                    <input type="checkbox" name="" id="">
+                    <span>Alguma coisa legal...</span>
+                </li>
+            </ul>
+
+            <input placeholder="Digite aqui a nova tarefa..." class="task-list-item" id="new-task-input" type="text">
+
+            <div class="task-list-footer">
+                <button id="btn-new-task">Nova tarefa</button>
+                <button id="colorButton">Alterar cor do fundo</button> <!-- Button to change color -->
+            </div>
+
+
+        </div>
+    </div>
 
     <script src="clock.js"></script> <!-- Link to JavaScript file -->
 </body>
+
 </html>
